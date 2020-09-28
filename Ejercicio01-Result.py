@@ -1,6 +1,7 @@
 listaRegistro = []
 clientes = 0
 conta1 = 1
+costoTotal = 0
  
  
 while clientes < conta1:
@@ -26,12 +27,13 @@ while clientes < conta1:
    
     else:
      clientes += 2
-       
-      
-     for registro in listaRegistro:
-      print(registro)
 
-     mensaje2 = "Los costos obtenidos durante la jordanada son "
-     for registro in listaRegistro:
-       costosTotal = sum(int(costo)) 
-       print(mensaje2 + str(costosTotal))
+for registro in listaRegistro:
+ print(registro)
+
+for registro in listaRegistro:
+ costoTotal = costoTotal + registro.get("costo")
+      
+ mensaje2 = "Los costos obtenidos durante la jordanada son "
+
+print(mensaje2 + str(costoTotal))
